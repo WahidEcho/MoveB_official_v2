@@ -1,26 +1,66 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Move Beyond Design Tokens */
+  --mb-bg-0: #ECF4FF; /* Light blue page background */
+  --mb-bg-1: #E1EEFF; /* Slightly deeper for sections/footers */
+  --mb-primary: #2563EB; /* Indigo-500 */
+  --mb-primary-2: #60A5FA; /* Blue-400 for gradients */
+  --mb-accent: #7C3AED; /* Keep accent purple */
+  --mb-surface: rgba(0, 0, 0, 0.03); /* Light surfaces on light bg */
+  --mb-surface-2: rgba(0, 0, 0, 0.05);
+  --mb-border: rgba(0, 0, 0, 0.12);
+  --mb-text: #0B1220; /* Dark text on light bg */
+  --mb-muted: #5B6B8B; /* Muted text on light */
+  --mb-success: #17C964;
+  --mb-warning: #F5A524;
+  --mb-danger: #F31260;
+
+  /* Tailwind runtime tokens without @theme to satisfy CSS linters */
+  --font-sans: var(--font-inter);
+  --font-display: var(--font-urbanist);
+  --text-foreground: var(--mb-text);
+  --background: var(--mb-bg-0);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+html, body {
+  background: var(--mb-bg-0);
+  color: var(--mb-text);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* Global focus styles */
+:where(a, button, [role="button"], input, select, textarea):focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px color-mix(in oklab, var(--mb-primary) 50%, transparent);
+  border-radius: 0.75rem;
+}
+
+/* Utilities */
+.container {
+  max-width: 1200px;
+}
+
+/* Glass and borders */
+.glass {
+  background: var(--mb-surface);
+  border: 1px solid var(--mb-border);
+  backdrop-filter: blur(8px);
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* Keyframes for logos auto-scroll */
+@keyframes logo-scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
 }
