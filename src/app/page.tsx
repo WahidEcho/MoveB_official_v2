@@ -1,6 +1,5 @@
 import Trust from "@/components/home/Trust";
 import ServicesTeaser from "@/components/home/ServicesTeaser";
-import ImpactTeaser from "@/components/home/ImpactTeaser";
 import KpiCounters from "@/components/services/KpiCounters";
 import CtaStrip from "@/components/home/CtaStrip";
 import CaseTeaser from "@/components/home/CaseTeaser";
