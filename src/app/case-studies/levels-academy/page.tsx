@@ -107,7 +107,7 @@ export default function LevelsAcademyPage() {
       {/* Testimonial */}
       <section className="container mx-auto px-6 py-8">
         <div className="rounded-2xl border border-[var(--mb-border)] bg-[var(--mb-surface)] p-6 md:p-10">
-          <blockquote className="text-xl md:text-2xl">"The system helped us finally centralize everything — courts, clients, and finance — in one smart tool. Move Beyond made our operations smoother and more professional."</blockquote>
+          <blockquote className="text-xl md:text-2xl">&ldquo;The system helped us finally centralize everything — courts, clients, and finance — in one smart tool. Move Beyond made our operations smoother and more professional.&rdquo;</blockquote>
           <div className="mt-3 text-[var(--mb-muted)]">— Levels Academy Management</div>
         </div>
       </section>

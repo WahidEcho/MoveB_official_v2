@@ -1,4 +1,3 @@
-import DeviceShowcase from "@/app/pass-app/components/DeviceShowcase";
 
 export default function PassAppTeaser() {
   return (

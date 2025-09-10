@@ -1,5 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { Card } from "@/components/ui/card";
 
 const paragraphs = [
@@ -30,7 +31,7 @@ export default function Story() {
           </div>
         </Card>
         <div className="relative rounded-2xl overflow-hidden border border-[var(--mb-border)] bg-[var(--mb-surface)] aspect-[4/3]">
-          <img src="/about/story.jpg" alt="Founding and early operations" className="w-full h-full object-cover" />
+          <Image src="/about/story.jpg" alt="Founding and early operations" fill className="object-cover" />
         </div>
       </div>
     </section>

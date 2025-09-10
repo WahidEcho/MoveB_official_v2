@@ -1,5 +1,5 @@
 "use client";
-import { motion, useMotionValue, useTransform, useScroll } from "framer-motion";
+import { motion, useTransform, useScroll } from "framer-motion";
 
 export default function CtaStrip() {
   const { scrollYProgress } = useScroll();

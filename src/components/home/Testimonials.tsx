@@ -31,7 +31,7 @@ export default function Testimonials() {
 
   useEffect(() => {
     if (paused) return;
-    intervalRef.current && clearInterval(intervalRef.current);
+    if (intervalRef.current) clearInterval(intervalRef.current);
     intervalRef.current = setInterval(() => {
       setIdx((i) => (i + 1) % quotes.length);
     }, 4000);
