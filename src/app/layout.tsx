@@ -34,7 +34,7 @@ export const metadata: Metadata = {
       "Strategic Sports & Events Consultancy for MENA & the Gulf. We help federations, governments, clubs, and brands plan, deliver, and digitize world-class sports experiences.",
     images: [
       {
-        url: "/og-default.jpg",
+        url: "/og-default.svg",
         width: 1200,
         height: 630,
         alt: "Move Beyond",
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     title: "Move Beyond | Sports & Events Consultancy",
     description:
       "Strategic Sports & Events Consultancy for MENA & the Gulf. We help federations, governments, clubs, and brands plan, deliver, and digitize world-class sports experiences.",
-    images: ["/og-default.jpg"],
+    images: ["/og-default.svg"],
   },
 };
 
