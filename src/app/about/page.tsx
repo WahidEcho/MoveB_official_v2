@@ -6,6 +6,7 @@ import LogoWall from "./components/LogoWall";
 import MissionVision from "./components/MissionVision";
 import Values from "./components/Values";
 import Founders from "./components/Founders";
+import CtaStrip from "@/components/common/CtaStrip";
 
 export const metadata = {
   title: "About | Move Beyond",
@@ -26,6 +27,7 @@ export default function AboutPage() {
         <Values />
         <Founders />
       </div>
+      <CtaStrip />
     </main>
   );
 }

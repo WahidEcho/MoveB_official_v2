@@ -40,7 +40,7 @@ export default function LogoStrip() {
             >
               {slides.map((src, i) => (
                 <div key={`${src}-${i}`} className="shrink-0 basis-auto">
-                  <div className="relative w-[400px] h-[200px] opacity-75 hover:opacity-100 transition" aria-label="logo">
+                  <div className="relative w-[400px] h-[200px] opacity-75 hover:opacity-100 transition transform hover:scale-[1.03]" aria-label="logo">
                     <Image src={src} alt="Partner logo" fill className="object-contain" unoptimized />
                   </div>
                 </div>

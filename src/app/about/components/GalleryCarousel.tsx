@@ -6,12 +6,13 @@ import Autoplay from "embla-carousel-autoplay";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const slides = [
-  { src: "/about/carousel/gpa-visit.svg", title: "GPA Visit – Cairo", caption: "Ops planning & stakeholder liaison (2025)" },
-  { src: "/about/carousel/levels.svg", title: "Levels Academy", caption: "Scheduling & finance visibility improvements" },
-  { src: "/about/carousel/ihf.svg", title: "IHF Club World Cup", caption: "Venue readiness & day‑of delivery" },
-  { src: "/about/carousel/epl.svg", title: "EPL Announcement", caption: "Venue preparation & protocol" },
-  { src: "/about/carousel/layali.svg", title: "Layali Misr Concerts", caption: "Crowd flow & access planning" },
-  { src: "/about/carousel/judo.svg", title: "Arab Judo Championship", caption: "Competition ops support" },
+  { src: "/about/carousel/Levels.jpg", title: "Levels Academy", caption: "Conflict‑free scheduling & finance clarity" },
+  { src: "/about/carousel/BankDuCaire.jpg", title: "Festival", caption: "Immersive fan quests & sponsor activations" },
+  { src: "/about/carousel/Insomnia.jpg", title: "Insomnia VR Activation", caption: "Immersive fan quests & sponsor activations" },
+  { src: "/about/carousel/BankDuCaire2.jpg", title: "Concerts & Mega‑events", caption: "Accreditation, production, and on‑site operations" },
+  { src: "/about/carousel/ExploreX.jpg", title: "ExploreX", caption: "Digital engagement & interactive experiences" },
+  { src: "/about/carousel/Unipal.jpg", title: "Unipal", caption: "Student engagement activations" },
+  { src: "/about/carousel/Unipal2.jpg", title: "Unipal (On‑site)", caption: "Live ops & brand zones" },
 ];
 
 export default function GalleryCarousel() {
@@ -28,11 +29,8 @@ export default function GalleryCarousel() {
         >
           <div className="flex">
             {slides.map((s) => (
-              <figure
-                key={s.src}
-                className="relative min-w-0 shrink-0 grow-0 basis-full md:basis-1/2 lg:basis-1/3"
-              >
-                <div className="relative aspect-[16/10]">
+              <figure key={s.src} className="relative min-w-0 shrink-0 grow-0 basis-full md:basis-1/2 lg:basis-1/3">
+                <div className="relative aspect-[16/9]">
                   <Image
                     src={s.src}
                     alt={s.title}
@@ -68,6 +66,7 @@ export default function GalleryCarousel() {
     </section>
   );
 }
+
 
 
 

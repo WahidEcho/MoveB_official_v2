@@ -6,7 +6,7 @@ export const metadata = {
 };
 
 const cases = [
-  { href: "/case-studies/levels-academy", title: "Levels Academy", sub: "Conflict‑free scheduling and faster ops with real‑time finance", img: "/case-studies/levels/cover.jpg" },
+  { href: "/case-studies/levels-academy", title: "Levels Academy", sub: "Conflict‑free scheduling and faster ops with real‑time finance", img: "/case-studies/levels/cover.jpg", logo: "/case-studies/levels/levelslogo.png", coverLogo: true },
   { href: "/case-studies/insomnia-vr-activation", title: "Insomnia (VR Activation)", sub: "Virtual Insomnia: a playable VR tour of the festival", img: "/case-studies/insomnia/cover.jpg" },
   { href: "/case-studies/bue-qr-ticketing", title: "BUE | Passaire QR Ticketing", sub: "Frictionless access with online QR and live tracking", img: "/case-studies/bue/cover.jpg" },
 ];

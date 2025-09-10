@@ -1,84 +1,92 @@
-import ServiceBlock from "./components/ServiceBlock";
-import CtaStrip from "@/components/home/CtaStrip";
+import ServicesHero from "./components/ServicesHero";
+import HalfBlock from "./components/HalfBlock";
+import CtaStrip from "@/components/common/CtaStrip";
 
 export const metadata = {
   title: "Services | Move Beyond",
   description:
-    "Consulting-first sports & events partner with elite operations and modern digital capabilities.",
+    "Move Beyond delivers digital innovation, event management, and sports consultancy for academies, federations, and organizers.",
 };
 
 const services = [
   {
-    id: "consulting",
-    title: "Sports & Events Consulting",
-    text:
-      "Strategic insight for federations, governments, clubs, and investors. We guide projects from feasibility to execution.",
+    title: "Custom Websites & Apps",
+    text: "Tailored digital platforms for sports organizations.",
     bullets: [
-      "Audits & strategy roadmaps",
-      "Governance frameworks & compliance",
-      "Feasibility studies & financial models",
-      "Bid/tender preparation & partner mapping",
+      "High-performance websites for academies, clubs & federations",
+      "Mobile apps for scheduling, communication & fan engagement",
+      "E-commerce integrations (registrations, payments, merchandise)",
+      "Multilingual and accessible design",
     ],
-    image: "/services/consulting.jpg",
-    cta: { label: "Request a Proposal", href: "/rfp" },
+    why: "Your digital presence is the front door of your academy or event. We make it fast, elegant, and effective.",
+    img: "/services/webapps.jpg",
   },
   {
-    id: "operations",
-    title: "Event Operations & Delivery",
-    text: "End-to-end operational mastery to ensure venues, people, and logistics align seamlessly.",
+    title: "Pass App (Ticketing & Access)",
+    text: "Our proprietary Pass App redefines ticketing, entry, and memberships.",
     bullets: [
-      "Master schedules & critical path",
-      "Venue readiness & accreditation",
-      "Security & government liaison",
-      "Transport, hospitality, workforce planning",
+      "QR-based ticketing & secure access",
+      "Membership & subscription management",
+      "Vouchers & perks (gifts, discounts, drinks)",
+      "Real-time entry tracking & analytics",
+      "Finance & revenue dashboards",
     ],
-    image: "/services/operations.jpg",
-    cta: { label: "Talk to an Expert", href: "/contact" },
+    why: "Trusted at events like BUE, Pass App ensures smooth gates, transparent data, and happy attendees.",
+    img: "/services/passapp.jpg",
   },
   {
-    id: "digital",
-    title: "Digital Solutions",
-    text:
-      "Our Pass App and digital dashboards give you control over ticketing, entry, finance, and live analytics.",
+    title: "SaaS Academy Management Platform",
+    text: "An all-in-one system designed for sports academies.",
     bullets: [
-      "Pass App (ticketing, entry, membership)",
-      "Real-time analytics & dashboards",
-      "Finance & revenue visibility",
-      "Systems integration",
+      "Scheduling & reservations (conflict-free)",
+      "Staff & coach management",
+      "Finance tracking (payments, expenses, revenue snapshots)",
+      "Attendance & performance analytics",
+      "Parent-friendly communication & invoicing",
     ],
-    image: "/services/digital.jpg",
-    cta: { label: "Explore Pass App", href: "/pass-app" },
+    why: "Proven with Levels Academy, this platform saves time, eliminates double-bookings, and boosts financial clarity.",
+    img: "/services/saas.jpg",
   },
   {
-    id: "brand",
-    title: "Brand & Media",
-    text: "We help your brand shine with digital presence, media operations, and VIP protocol.",
+    title: "Event Management & Production",
+    text: "End-to-end support for sports and entertainment events.",
     bullets: [
-      "Websites & apps",
-      "Media ops & comms workflows",
-      "Content & storytelling",
-      "VIP & protocol management",
+      "Concept design & planning",
+      "Venue booking & logistics coordination",
+      "Accreditation & access control",
+      "Security liaison, staffing & volunteer management",
+      "Stage design, lighting, sound & AV systems",
+      "Live streaming & broadcast support",
+      "Fan engagement zones & sponsor activations",
+      "On-site technical & operational management",
     ],
-    image: "/services/brand.jpg",
-    cta: { label: "Contact Us", href: "/contact" },
+    why: "From intimate academy showcases to large-scale concerts and mega-sporting events, we ensure flawless operations and world-class production.",
+    img: "/services/events.jpg",
+  },
+  {
+    title: "Sports Tech Integration & VR Activations",
+    text: "Cutting-edge solutions to elevate events and fan engagement.",
+    bullets: [
+      "VR activations (immersive event experiences, sponsor quests, interactive fan zones)",
+      "Digital fan engagement campaigns",
+      "Integrations with existing ticketing or federation systems",
+      "Custom dashboards for operations & live monitoring",
+    ],
+    why: "From Insomnia VR Activation to multi-venue monitoring, we merge creativity with technology to create unforgettable experiences.",
+    img: "/services/vr.jpg",
   },
 ];
 
 export default function ServicesPage() {
   return (
     <main className="min-h-screen bg-[var(--mb-bg-0)] text-[var(--mb-text)]">
-      <section className="py-20 text-center">
-        <h1 className="font-display text-4xl md:text-6xl font-bold">Our Services</h1>
-        <p className="mt-4 text-lg text-[var(--mb-muted)] max-w-2xl mx-auto">
-          Consulting-first sports & events partner with elite operations and modern digital capabilities.
-        </p>
-      </section>
-      <div className="space-y-20">
+      <ServicesHero />
+      <div className="space-y-6">
         {services.map((s, i) => (
-          <ServiceBlock key={s.id} service={s} reverse={i % 2 === 1} />
+          <HalfBlock key={s.title} {...s} reverse={i % 2 === 1} />
         ))}
       </div>
-      <CtaStrip />
+      <CtaStrip title="Ready to Move Beyond?" primary={{label:"Request a Proposal", href:"/rfp"}} secondary={{label:"Book a Demo", href:"/contact?type=demo"}} />
     </main>
   );
 }

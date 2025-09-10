@@ -17,11 +17,12 @@ const logos = [
 export default function LogoWall() {
   return (
     <section aria-labelledby="logos">
-      <h2 id="logos" className="font-display text-3xl md:text-4xl font-semibold mb-6">Who We’ve Worked With</h2>
+      <h2 id="logos" className="font-display text-3xl md:text-4xl font-semibold mb-2">Who We’ve Worked With</h2>
+      <p className="text-[var(--mb-muted)] mb-6">Trusted by leading academies, universities, entertainment organizers, and federations.</p>
       <Card className="bg-[var(--mb-surface)] border-[var(--mb-border)] backdrop-blur">
         <div className="p-6 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 place-items-center">
           {logos.map((l) => (
-            <div key={l.name} className="opacity-70 hover:opacity-100 transition" aria-label={l.name}>
+            <div key={l.name} className="grayscale hover:grayscale-0 opacity-80 hover:opacity-100 transition" aria-label={l.name}>
               <div className="relative w-28 h-12">
                 <Image src={l.src} alt={l.name} fill className="object-contain" />
               </div>
@@ -32,6 +33,7 @@ export default function LogoWall() {
     </section>
   );
 }
+
 
 
 

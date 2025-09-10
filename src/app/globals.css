@@ -15,6 +15,7 @@
   --mb-success: #17C964;
   --mb-warning: #F5A524;
   --mb-danger: #F31260;
+  --mb-card-logo-bg: rgba(255, 255, 255, 0.95);
 
   /* Tailwind runtime tokens without @theme to satisfy CSS linters */
   --font-sans: var(--font-inter);
@@ -23,12 +24,76 @@
   --background: var(--mb-bg-0);
 }
 
+/* Dark theme overrides */
+.theme-dark {
+  --mb-bg-0: #0B1220;
+  --mb-bg-1: #0E1628;
+  --mb-primary: #4F46E5; /* indigo-600 */
+  --mb-primary-2: #22D3EE; /* cyan-400 */
+  --mb-accent: #A78BFA; /* violet-400 */
+  --mb-surface: rgba(255, 255, 255, 0.08);
+  --mb-surface-2: rgba(255, 255, 255, 0.12);
+  --mb-border: rgba(255, 255, 255, 0.18);
+  --mb-text: #F5F7FF;
+  --mb-muted: #B6C0DA;
+  --mb-card-logo-bg: rgba(0, 0, 0, 0.9);
+}
+
 html, body {
-  background: var(--mb-bg-0);
+  background: radial-gradient(1200px 600px at 10% -10%, color-mix(in oklab, var(--mb-primary-2) 20%, transparent), transparent),
+              radial-gradient(900px 480px at 90% 10%, color-mix(in oklab, var(--mb-primary) 15%, transparent), transparent),
+              var(--mb-bg-0);
   color: var(--mb-text);
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.theme-dark body, .theme-dark {
+  background: radial-gradient(1200px 600px at 10% -10%, color-mix(in oklab, var(--mb-primary-2) 10%, transparent), transparent),
+              radial-gradient(900px 480px at 90% 10%, color-mix(in oklab, var(--mb-accent) 10%, transparent), transparent),
+              var(--mb-bg-0);
+}
+
+/* Global animated blobs/grid background */
+.site-bg {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: -1;
+  overflow: hidden;
+}
+.site-bg .blob {
+  position: absolute;
+  filter: blur(60px);
+  opacity: 0.45;
+  border-radius: 50%;
+  animation: floaty 22s ease-in-out infinite;
+}
+.site-bg .blob-1 {
+  width: 600px; height: 600px; left: -120px; top: -120px;
+  background: radial-gradient(circle at 30% 30%, color-mix(in oklab, var(--mb-primary-2) 70%, transparent), transparent 60%);
+}
+.site-bg .blob-2 {
+  width: 520px; height: 520px; right: -140px; top: 120px;
+  background: radial-gradient(circle at 70% 30%, color-mix(in oklab, var(--mb-primary) 60%, transparent), transparent 60%);
+  animation-duration: 26s;
+}
+.site-bg .blob-3 {
+  width: 480px; height: 480px; left: 40%; bottom: -140px;
+  background: radial-gradient(circle at 50% 50%, color-mix(in oklab, var(--mb-accent) 55%, transparent), transparent 60%);
+  animation-duration: 28s;
+}
+.site-bg .bg-grid {
+  position: absolute;
+  inset: -1px;
+  opacity: 0.08;
+  background: linear-gradient(transparent 95%, var(--mb-border) 96%), linear-gradient(90deg, transparent 95%, var(--mb-border) 96%);
+  background-size: 28px 28px;
+}
+@keyframes floaty {
+  0%, 100% { transform: translate3d(0,0,0) scale(1); }
+  50% { transform: translate3d(0,-20px,0) scale(1.05); }
 }
 
 /* Global focus styles */
@@ -63,4 +128,14 @@ html, body {
 @keyframes logo-scroll {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
+}
+
+/* Case pages carousel */
+@keyframes smoothSlide {
+  from { transform: translateX(0); }
+  to { transform: translateX(-300vw); }
+}
+@keyframes smoothSlidePct {
+  from { transform: translateX(0); }
+  to { transform: translateX(-300%); }
 }

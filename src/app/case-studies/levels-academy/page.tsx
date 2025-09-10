@@ -30,20 +30,27 @@ export default function LevelsAcademyPage() {
         <div className="absolute inset-0 -z-10">
           <Image src="/case-studies/levels/cover.jpg" alt="Levels Academy courts" fill className="object-cover opacity-30" />
         </div>
-        <div className="container mx-auto px-6 py-20 md:py-28">
-          <nav aria-label="Breadcrumb" className="text-xs text-[var(--mb-muted)]">
-            <ol className="flex gap-2">
-              <li><Link href="/">Home</Link></li>
-              <li>/</li>
-              <li><Link href="/case-studies">Case Studies</Link></li>
-              <li>/</li>
-              <li aria-current="page" className="text-[var(--mb-text)]">Levels Sports Academy</li>
-            </ol>
-          </nav>
-          <h1 className="font-display text-4xl md:text-5xl font-bold mt-4 max-w-4xl">How Levels Sports Academy Transformed Operations with Move Beyond</h1>
-          <p className="mt-4 text-lg text-[var(--mb-muted)] max-w-3xl">A smart, internal booking and analytics platform built for scalable sports management.</p>
-          <div className="mt-8">
-            <a href="#impact" className="inline-flex items-center rounded-xl px-6 py-3 text-white bg-gradient-to-r from-[var(--mb-primary)] to-[var(--mb-primary-2)]">See How It Works</a>
+        <div className="container mx-auto px-6 py-20 md:py-28 grid lg:grid-cols-2 gap-10 items-center">
+          <div>
+            <nav aria-label="Breadcrumb" className="text-xs text-[var(--mb-muted)]">
+              <ol className="flex gap-2">
+                <li><Link href="/">Home</Link></li>
+                <li>/</li>
+                <li><Link href="/case-studies">Case Studies</Link></li>
+                <li>/</li>
+                <li aria-current="page" className="text-[var(--mb-text)]">Levels Sports Academy</li>
+              </ol>
+            </nav>
+            <h1 className="font-display text-4xl md:text-5xl font-bold mt-4 max-w-4xl">How Levels Sports Academy Transformed Operations with Move Beyond</h1>
+            <p className="mt-4 text-lg text-[var(--mb-muted)] max-w-3xl">A smart, internal booking and analytics platform built for scalable sports management.</p>
+            <div className="mt-8">
+              <a href="#impact" className="inline-flex items-center rounded-xl px-6 py-3 text-white bg-gradient-to-r from-[var(--mb-primary)] to-[var(--mb-primary-2)]">See How It Works</a>
+            </div>
+          </div>
+          <div className="hidden md:flex justify-center">
+            <div className="relative w-[400px] h-[400px]">
+              <Image src="/case-studies/levels/levelslogo.png" alt="Levels Academy logo" fill className="object-contain" unoptimized />
+            </div>
           </div>
         </div>
       </section>
@@ -95,21 +102,28 @@ export default function LevelsAcademyPage() {
         </div>
       </section>
 
-      {/* Tech Stack */}
-      <section className="container mx-auto px-6 py-8">
-        <h2 className="font-display text-3xl md:text-4xl font-semibold">Tech Stack</h2>
-        <ul className="mt-4 grid md:grid-cols-2 gap-3 text-[var(--mb-muted)]">
-          <li>Built using: React.js, Node.js, MongoDB Atlas</li>
-          <li>Hosted on: Heroku + Netlify Functions</li>
-          <li>SSL secured and no app download required</li>
-        </ul>
-      </section>
+      
 
       {/* Testimonial */}
       <section className="container mx-auto px-6 py-8">
         <div className="rounded-2xl border border-[var(--mb-border)] bg-[var(--mb-surface)] p-6 md:p-10">
-          <blockquote className="text-xl md:text-2xl">“The system helped us finally centralize everything — courts, clients, and finance — in one smart tool. Move Beyond made our operations smoother and more professional.”</blockquote>
+          <blockquote className="text-xl md:text-2xl">"The system helped us finally centralize everything — courts, clients, and finance — in one smart tool. Move Beyond made our operations smoother and more professional."</blockquote>
           <div className="mt-3 text-[var(--mb-muted)]">— Levels Academy Management</div>
+        </div>
+      </section>
+
+      {/* Gallery Carousel - constrained inside white rounded rectangle */}
+      <section className="py-10">
+        <div className="container mx-auto px-6">
+          <div className="relative overflow-hidden rounded-3xl bg-white border border-[var(--mb-border)] shadow-[0_12px_40px_rgba(0,0,0,0.08)] aspect-[1/.6]">
+            <div className="flex h-full animate-[smoothSlidePct_45s_linear_infinite]">
+              {["/case-studies/levels/lvl1.jpg","/case-studies/levels/lvl2.jpg","/case-studies/levels/lvl3.jpg","/case-studies/levels/lvl1.jpg","/case-studies/levels/lvl2.jpg","/case-studies/levels/lvl3.jpg"].map((src,i)=> (
+                <div key={i} className="relative shrink-0 basis-full h-full">
+                  <Image src={src} alt={`Levels slide ${i+1}`} fill className="object-cover" unoptimized />
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
 

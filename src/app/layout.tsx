@@ -3,6 +3,8 @@ import Link from "next/link";
 import Image from "next/image";
 import { Inter, Urbanist } from "next/font/google";
 import "./globals.css";
+import { ThemeProvider } from "@/components/ui/ThemeProvider";
+import ThemeToggle from "@/components/ui/ThemeToggle";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -56,6 +58,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.variable} ${urbanist.variable} antialiased font-sans`}>
+        <ThemeProvider>
+        {/* Global animated background */}
+        <div aria-hidden className="site-bg">
+          <div className="blob blob-1" />
+          <div className="blob blob-2" />
+          <div className="blob blob-3" />
+          <div className="bg-grid" />
+        </div>
         <header className="sticky top-0 z-50 backdrop-blur bg-[color-mix(in oklab,var(--mb-bg-0) 80%,transparent)] border-b border-[var(--mb-border)]">
           <div className="container mx-auto px-6 h-16 flex items-center justify-between">
             <Link href="/" className="flex items-center gap-3">
@@ -69,6 +79,7 @@ export default function RootLayout({
               <Link href="/case-studies" className="hover:opacity-80">Case Studies</Link>
               <Link href="/contact" className="hover:opacity-80">Contact</Link>
               <Link href="/rfp" className="inline-flex items-center rounded-lg px-4 py-2 text-white bg-gradient-to-r from-[var(--mb-primary)] to-[var(--mb-primary-2)]">Request a Proposal</Link>
+              <ThemeToggle />
             </nav>
           </div>
         </header>
@@ -109,6 +120,7 @@ export default function RootLayout({
         <div className="fixed bottom-4 right-4 z-50 md:hidden">
           <a href="/contact?type=demo" className="rounded-full px-5 py-3 text-white shadow-md bg-gradient-to-r from-[var(--mb-primary)] to-[var(--mb-primary-2)]">Book a Demo</a>
         </div>
+        </ThemeProvider>
       </body>
     </html>
   );

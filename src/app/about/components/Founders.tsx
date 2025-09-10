@@ -1,7 +1,7 @@
 export default function Founders() {
   const founders = [
-    { name: "Belal Helbawey", role: "CEO (Events & Operations)" },
-    { name: "Mohamed Wahid", role: "CTO (Systems & Digital)" },
+    { name: "Belal Helbawey", role: "CEO (Events & Operations), Sports industry veteran with extensive experience in event management and academy operations. Brings a deep understanding of how sports businesses run and the challenges they face." },
+    { name: "Mohamed Wahid", role: "CTO (Systems & Digital), Technology expert in systems development and software architecture. Passionate about building scalable solutions that solve real-world problems and raise the standard for sports technology." },
   ];
   return (
     <section aria-labelledby="founders">
@@ -17,6 +17,8 @@ export default function Founders() {
     </section>
   );
 }
+
+
 
 
 
