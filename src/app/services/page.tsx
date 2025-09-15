@@ -19,7 +19,7 @@ const services = [
       "Multilingual and accessible design",
     ],
     why: "Your digital presence is the front door of your academy or event. We make it fast, elegant, and effective.",
-    img: "/services/webapps.jpg",
+    img: "/services/webapps.svg",
   },
   {
     title: "Pass App (Ticketing & Access)",
@@ -32,7 +32,7 @@ const services = [
       "Finance & revenue dashboards",
     ],
     why: "Trusted at events like BUE, Pass App ensures smooth gates, transparent data, and happy attendees.",
-    img: "/services/passapp.jpg",
+    img: "/services/passapp.svg",
   },
   {
     title: "SaaS Academy Management Platform",
@@ -45,7 +45,7 @@ const services = [
       "Parent-friendly communication & invoicing",
     ],
     why: "Proven with Levels Academy, this platform saves time, eliminates double-bookings, and boosts financial clarity.",
-    img: "/services/saas.jpg",
+    img: "/services/saas.svg",
   },
   {
     title: "Event Management & Production",
@@ -61,7 +61,7 @@ const services = [
       "On-site technical & operational management",
     ],
     why: "From intimate academy showcases to large-scale concerts and mega-sporting events, we ensure flawless operations and world-class production.",
-    img: "/services/events.jpg",
+    img: "/services/events.svg",
   },
   {
     title: "Sports Tech Integration & VR Activations",
@@ -73,7 +73,7 @@ const services = [
       "Custom dashboards for operations & live monitoring",
     ],
     why: "From Insomnia VR Activation to multi-venue monitoring, we merge creativity with technology to create unforgettable experiences.",
-    img: "/services/vr.jpg",
+    img: "/services/vr.svg",
   },
 ];
 

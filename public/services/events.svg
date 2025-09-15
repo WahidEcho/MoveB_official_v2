@@ -1,0 +1,85 @@
+<svg width="600" height="400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="stageGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#F59E0B;stop-opacity:0.9"/>
+      <stop offset="100%" style="stop-color:#D97706;stop-opacity:1"/>
+    </linearGradient>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0F172A"/>
+      <stop offset="100%" style="stop-color:#1E293B"/>
+    </linearGradient>
+    <radialGradient id="spotlight" cx="50%" cy="30%" r="40%">
+      <stop offset="0%" style="stop-color:#FFF;stop-opacity:0.8"/>
+      <stop offset="100%" style="stop-color:#FFF;stop-opacity:0"/>
+    </radialGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="600" height="400" fill="url(#bg)"/>
+  
+  <!-- Stadium/Venue -->
+  <ellipse cx="300" cy="320" rx="250" ry="60" fill="#374151"/>
+  
+  <!-- Stage -->
+  <rect x="200" y="200" width="200" height="120" fill="#1F2937"/>
+  <rect x="180" y="180" width="240" height="20" fill="url(#stageGlow)"/>
+  
+  <!-- Stage Lights -->
+  <circle cx="220" cy="190" r="8" fill="#F59E0B">
+    <animate attributeName="opacity" values="0.5;1;0.5" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="260" cy="190" r="8" fill="#EF4444">
+    <animate attributeName="opacity" values="1;0.5;1" dur="2.2s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="300" cy="190" r="8" fill="#10B981">
+    <animate attributeName="opacity" values="0.5;1;0.5" dur="1.8s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="340" cy="190" r="8" fill="#3B82F6">
+    <animate attributeName="opacity" values="1;0.5;1" dur="2.4s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="380" cy="190" r="8" fill="#8B5CF6">
+    <animate attributeName="opacity" values="0.5;1;0.5" dur="2.1s" repeatCount="indefinite"/>
+  </circle>
+  
+  <!-- Spotlight Effect -->
+  <ellipse cx="300" cy="240" rx="120" ry="80" fill="url(#spotlight)" opacity="0.6"/>
+  
+  <!-- Sound System -->
+  <rect x="150" y="220" width="30" height="60" fill="#374151" rx="5"/>
+  <rect x="420" y="220" width="30" height="60" fill="#374151" rx="5"/>
+  <circle cx="165" cy="240" r="8" fill="#1F2937"/>
+  <circle cx="435" cy="240" r="8" fill="#1F2937"/>
+  <circle cx="165" cy="260" r="8" fill="#1F2937"/>
+  <circle cx="435" cy="260" r="8" fill="#1F2937"/>
+  
+  <!-- Audience/Crowd -->
+  <circle cx="100" cy="300" r="12" fill="#475569"/>
+  <circle cx="120" cy="305" r="12" fill="#475569"/>
+  <circle cx="140" cy="300" r="12" fill="#475569"/>
+  <circle cx="460" cy="300" r="12" fill="#475569"/>
+  <circle cx="480" cy="305" r="12" fill="#475569"/>
+  <circle cx="500" cy="300" r="12" fill="#475569"/>
+  
+  <!-- Cameras -->
+  <rect x="50" y="180" width="25" height="15" fill="#1F2937" rx="3"/>
+  <circle cx="62" cy="187" r="6" fill="#374151"/>
+  <rect x="525" y="180" width="25" height="15" fill="#1F2937" rx="3"/>
+  <circle cx="537" cy="187" r="6" fill="#374151"/>
+  
+  <!-- Production Equipment -->
+  <rect x="480" y="120" width="80" height="40" fill="#1F2937" rx="5"/>
+  <text x="520" y="140" font-family="Arial, sans-serif" font-size="10" fill="#94A3B8" text-anchor="middle">CONTROL</text>
+  <rect x="490" y="125" width="8" height="8" fill="#10B981"/>
+  <rect x="502" y="125" width="8" height="8" fill="#EF4444"/>
+  <rect x="514" y="125" width="8" height="8" fill="#F59E0B"/>
+  <rect x="526" y="125" width="8" height="8" fill="#3B82F6"/>
+  
+  <!-- Security/Staff -->
+  <rect x="120" y="250" width="15" height="25" fill="#F59E0B" rx="2"/>
+  <circle cx="127" cy="245" r="6" fill="#FBBF24"/>
+  <text x="127" y="285" font-family="Arial, sans-serif" font-size="8" fill="#94A3B8" text-anchor="middle">STAFF</text>
+  
+  <!-- Title -->
+  <text x="300" y="50" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#E2E8F0" text-anchor="middle">Event Management</text>
+  <text x="300" y="75" font-family="Arial, sans-serif" font-size="14" fill="#94A3B8" text-anchor="middle">End-to-end event production &amp; operations</text>
+</svg>
