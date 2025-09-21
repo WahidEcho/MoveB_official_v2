@@ -3,15 +3,8 @@ import EventSolution from "./components/EventSolution";
 import GuestRegistration from "./components/GuestRegistration";
 import UserRoles from "./components/UserRoles";
 import ManagerDashboard from "./components/ManagerDashboard";
-import PassAppPictures from "./components/PassAppPictures";
-import BuiltForGates from "./components/BuiltForGates";
 import PassAppFlow from "./components/PassAppFlow";
 import FeatureGrid from "./components/FeatureGrid";
-import DeviceShowcase from "./components/DeviceShowcase";
-import FlowSteps from "./components/FlowSteps";
-import VoucherShowcase from "./components/VoucherShowcase";
-import AnalyticsTiles from "./components/AnalyticsTiles";
-import Carousel from "./components/Carousel";
 import FAQ from "./components/FAQ";
 import CtaStrip from "@/components/common/CtaStrip";
 

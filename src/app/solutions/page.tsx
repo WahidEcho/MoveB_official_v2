@@ -1,6 +1,5 @@
 import { Metadata } from "next";
 import Link from "next/link";
-import Image from "next/image";
 import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Globe, Smartphone, Headphones, Database } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -143,7 +142,7 @@ export default function SolutionsPage() {
           </div>
 
           <div className="grid lg:grid-cols-3 gap-8">
-            {solutions.map((solution, index) => {
+            {solutions.map((solution) => {
               const IconComponent = solution.icon;
               return (
                 <div 
@@ -242,7 +241,7 @@ export default function SolutionsPage() {
           <div className="text-center mb-16">
             <h2 className="font-display text-4xl md:text-5xl font-bold mb-6">What Our Clients Say</h2>
             <p className="text-xl text-[var(--mb-muted)] max-w-3xl mx-auto">
-              Don't just take our word for it. Here's what industry leaders say about our solutions.
+              Don&apos;t just take our word for it. Here&apos;s what industry leaders say about our solutions.
             </p>
           </div>
 
@@ -254,7 +253,7 @@ export default function SolutionsPage() {
                     <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                   ))}
                 </div>
-                <blockquote className="text-lg mb-6 italic">"{testimonial.quote}"</blockquote>
+                <blockquote className="text-lg mb-6 italic">&ldquo;{testimonial.quote}&rdquo;</blockquote>
                 <div>
                   <div className="font-semibold">{testimonial.author}</div>
                   <div className="text-[var(--mb-muted)] text-sm">{testimonial.company}</div>
