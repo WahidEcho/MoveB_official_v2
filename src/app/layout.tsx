@@ -81,6 +81,7 @@ export default function RootLayout({
               <Link href="/services" className="hover:opacity-80">Services</Link>
               <Link href="/pass-app" className="hover:opacity-80">Pass App</Link>
               <Link href="/solutions" className="hover:opacity-80">Solutions</Link>
+              <Link href="/solutions/illusionaire" className="hover:opacity-80">Illusionaire VR</Link>
               <Link href="/solutions/saas-academy-management-platform" className="hover:opacity-80">SAMP</Link>
               <Link href="/contact" className="hover:opacity-80">Contact</Link>
               <Link href="/rfp" className="inline-flex items-center rounded-lg px-4 py-2 text-white bg-gradient-to-r from-[var(--mb-primary)] to-[var(--mb-primary-2)]">Request a Proposal</Link>
