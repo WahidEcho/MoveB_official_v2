@@ -1,0 +1,71 @@
+<svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="holoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00f5ff"/>
+      <stop offset="50%" style="stop-color:#8b5cf6"/>
+      <stop offset="100%" style="stop-color:#ec4899"/>
+    </linearGradient>
+    <filter id="holoGlow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Hologram Base -->
+  <ellipse cx="50" cy="85" rx="30" ry="8" fill="url(#holoGradient)" opacity="0.3"/>
+  
+  <!-- Hologram Projector -->
+  <rect x="40" y="75" width="20" height="15" rx="3" fill="url(#holoGradient)" opacity="0.8"/>
+  <rect x="45" y="78" width="10" height="3" fill="#ffffff" opacity="0.6"/>
+  
+  <!-- Hologram Beam -->
+  <polygon points="45,75 55,75 60,25 40,25" fill="url(#holoGradient)" opacity="0.2"/>
+  
+  <!-- Holographic Figure -->
+  <g filter="url(#holoGlow)">
+    <!-- Head -->
+    <circle cx="50" cy="30" r="8" fill="none" stroke="#00f5ff" stroke-width="2" opacity="0.8">
+      <animate attributeName="opacity" values="0.4;1;0.4" dur="3s" repeatCount="indefinite"/>
+    </circle>
+    
+    <!-- Body -->
+    <line x1="50" y1="38" x2="50" y2="55" stroke="#00f5ff" stroke-width="2" opacity="0.8">
+      <animate attributeName="opacity" values="0.4;1;0.4" dur="3s" begin="0.5s" repeatCount="indefinite"/>
+    </line>
+    
+    <!-- Arms -->
+    <line x1="50" y1="45" x2="40" y2="50" stroke="#00f5ff" stroke-width="2" opacity="0.8">
+      <animate attributeName="opacity" values="0.4;1;0.4" dur="3s" begin="1s" repeatCount="indefinite"/>
+    </line>
+    <line x1="50" y1="45" x2="60" y2="50" stroke="#00f5ff" stroke-width="2" opacity="0.8">
+      <animate attributeName="opacity" values="0.4;1;0.4" dur="3s" begin="1s" repeatCount="indefinite"/>
+    </line>
+    
+    <!-- Legs -->
+    <line x1="50" y1="55" x2="45" y2="65" stroke="#00f5ff" stroke-width="2" opacity="0.8">
+      <animate attributeName="opacity" values="0.4;1;0.4" dur="3s" begin="1.5s" repeatCount="indefinite"/>
+    </line>
+    <line x1="50" y1="55" x2="55" y2="65" stroke="#00f5ff" stroke-width="2" opacity="0.8">
+      <animate attributeName="opacity" values="0.4;1;0.4" dur="3s" begin="1.5s" repeatCount="indefinite"/>
+    </line>
+  </g>
+  
+  <!-- Scanning Lines -->
+  <rect x="35" y="25" width="30" height="1" fill="#00f5ff" opacity="0.6">
+    <animateTransform attributeName="transform" type="translate" values="0,0;0,45;0,0" dur="2s" repeatCount="indefinite"/>
+  </rect>
+  
+  <!-- Data Points -->
+  <circle cx="42" cy="32" r="1" fill="#ec4899">
+    <animate attributeName="opacity" values="0;1;0" dur="1s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="58" cy="38" r="1" fill="#ec4899">
+    <animate attributeName="opacity" values="0;1;0" dur="1s" begin="0.3s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="46" cy="52" r="1" fill="#ec4899">
+    <animate attributeName="opacity" values="0;1;0" dur="1s" begin="0.6s" repeatCount="indefinite"/>
+  </circle>
+</svg>

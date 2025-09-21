@@ -1,73 +1,175 @@
-<svg width="600" height="400" xmlns="http://www.w3.org/2000/svg">
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300" viewBox="0 0 400 300">
   <defs>
-    <linearGradient id="dashboardGlow" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#8B5CF6;stop-opacity:0.9"/>
-      <stop offset="100%" style="stop-color:#7C3AED;stop-opacity:1"/>
-    </linearGradient>
     <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" style="stop-color:#0F172A"/>
       <stop offset="100%" style="stop-color:#1E293B"/>
     </linearGradient>
+    <linearGradient id="purple" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8B5CF6"/>
+      <stop offset="100%" style="stop-color:#7C3AED"/>
+    </linearGradient>
+    <linearGradient id="green" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#10B981"/>
+      <stop offset="100%" style="stop-color:#059669"/>
+    </linearGradient>
+    <linearGradient id="blue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#06B6D4"/>
+      <stop offset="100%" style="stop-color:#0891B2"/>
+    </linearGradient>
   </defs>
   
   <!-- Background -->
-  <rect width="600" height="400" fill="url(#bg)"/>
+  <rect width="400" height="300" fill="url(#bg)"/>
   
-  <!-- Main Dashboard -->
-  <rect x="150" y="100" width="300" height="200" rx="12" fill="#1F2937" stroke="#374151" stroke-width="2"/>
-  <rect x="160" y="110" width="280" height="40" fill="url(#dashboardGlow)"/>
+  <!-- Main Dashboard Container - Centered with safe margins -->
+  <rect x="50" y="50" width="300" height="200" rx="8" fill="#1F2937" stroke="#374151" stroke-width="2"/>
   
-  <!-- Dashboard Header -->
-  <text x="170" y="130" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#fff">Academy Management Dashboard</text>
+  <!-- Header Bar - Properly contained -->
+  <rect x="55" y="55" width="290" height="25" rx="4" fill="url(#purple)"/>
+  <text x="200" y="70" font-family="Arial" font-size="12" font-weight="bold" fill="white" text-anchor="middle">SaaS Academy Platform</text>
   
-  <!-- Calendar/Schedule Section -->
-  <rect x="170" y="160" width="120" height="80" fill="#374151" rx="6"/>
-  <text x="180" y="175" font-family="Arial, sans-serif" font-size="10" fill="#E2E8F0">Schedule</text>
-  <rect x="180" y="185" width="15" height="15" fill="#10B981" rx="2"/>
-  <rect x="200" y="185" width="15" height="15" fill="#F59E0B" rx="2"/>
-  <rect x="220" y="185" width="15" height="15" fill="#EF4444" rx="2"/>
-  <rect x="180" y="205" width="15" height="15" fill="#8B5CF6" rx="2"/>
-  <rect x="200" y="205" width="15" height="15" fill="#06B6D4" rx="2"/>
-  <text x="180" y="230" font-family="Arial, sans-serif" font-size="8" fill="#94A3B8">Conflict-free</text>
+  <!-- Navigation Tabs - Centered layout -->
+  <rect x="70" y="85" width="50" height="15" rx="3" fill="#8B5CF6"/>
+  <text x="95" y="95" font-family="Arial" font-size="8" fill="white" text-anchor="middle">Dashboard</text>
   
-  <!-- Finance Section -->
-  <rect x="300" y="160" width="120" height="80" fill="#374151" rx="6"/>
-  <text x="310" y="175" font-family="Arial, sans-serif" font-size="10" fill="#E2E8F0">Finance</text>
+  <rect x="130" y="85" width="50" height="15" rx="3" fill="#374151"/>
+  <text x="155" y="95" font-family="Arial" font-size="8" fill="#94A3B8" text-anchor="middle">Schedule</text>
   
-  <!-- Revenue Chart -->
-  <rect x="310" y="185" width="8" height="20" fill="#10B981"/>
-  <rect x="320" y="190" width="8" height="15" fill="#10B981"/>
-  <rect x="330" y="180" width="8" height="25" fill="#10B981"/>
-  <rect x="340" y="185" width="8" height="20" fill="#10B981"/>
-  <rect x="350" y="175" width="8" height="30" fill="#10B981"/>
+  <rect x="190" y="85" width="50" height="15" rx="3" fill="#374151"/>
+  <text x="215" y="95" font-family="Arial" font-size="8" fill="#94A3B8" text-anchor="middle">Finance</text>
   
-  <text x="310" y="220" font-family="Arial, sans-serif" font-size="8" fill="#94A3B8">Revenue</text>
-  <text x="370" y="195" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#10B981">↗</text>
+  <rect x="250" y="85" width="50" height="15" rx="3" fill="#374151"/>
+  <text x="275" y="95" font-family="Arial" font-size="8" fill="#94A3B8" text-anchor="middle">Staff</text>
   
-  <!-- Student/Staff Icons -->
-  <circle cx="100" cy="180" r="20" fill="#60A5FA"/>
-  <circle cx="100" cy="170" r="8" fill="#1F2937"/>
-  <rect x="95" y="185" width="10" height="15" fill="#1F2937" rx="2"/>
-  <text x="100" y="220" font-family="Arial, sans-serif" font-size="10" fill="#94A3B8" text-anchor="middle">Students</text>
+  <!-- Left Panel - Schedule (contained within margins) -->
+  <rect x="65" y="110" width="75" height="60" rx="4" fill="#374151" stroke="#8B5CF6" stroke-width="1"/>
+  <text x="102" y="125" font-family="Arial" font-size="8" font-weight="bold" fill="#8B5CF6" text-anchor="middle">SCHEDULE</text>
   
-  <circle cx="520" cy="180" r="20" fill="#F59E0B"/>
-  <circle cx="520" cy="170" r="8" fill="#1F2937"/>
-  <rect x="515" y="185" width="10" height="15" fill="#1F2937" rx="2"/>
-  <text x="520" y="220" font-family="Arial, sans-serif" font-size="10" fill="#94A3B8" text-anchor="middle">Coaches</text>
+  <!-- Calendar Grid - Scaled to fit -->
+  <rect x="72" y="130" width="8" height="6" fill="#8B5CF6"/>
+  <rect x="82" y="130" width="8" height="6" fill="#10B981"/>
+  <rect x="92" y="130" width="8" height="6" fill="#F59E0B"/>
+  <rect x="102" y="130" width="8" height="6" fill="#EF4444"/>
+  <rect x="112" y="130" width="8" height="6" fill="#06B6D4"/>
+  <rect x="122" y="130" width="8" height="6" fill="#EC4899"/>
   
-  <!-- Connection Lines -->
-  <path d="M120 180 L150 180" stroke="#60A5FA" stroke-width="2" stroke-dasharray="3,3">
-    <animate attributeName="stroke-dashoffset" values="0;6" dur="2s" repeatCount="indefinite"/>
-  </path>
-  <path d="M450 180 L520 180" stroke="#F59E0B" stroke-width="2" stroke-dasharray="3,3">
-    <animate attributeName="stroke-dashoffset" values="0;6" dur="2s" repeatCount="indefinite"/>
-  </path>
+  <rect x="72" y="140" width="8" height="6" fill="#10B981"/>
+  <rect x="82" y="140" width="8" height="6" fill="#8B5CF6"/>
+  <rect x="92" y="140" width="8" height="6" fill="#EF4444"/>
+  <rect x="102" y="140" width="8" height="6" fill="#06B6D4"/>
+  <rect x="112" y="140" width="8" height="6" fill="#F59E0B"/>
+  <rect x="122" y="140" width="8" height="6" fill="#8B5CF6"/>
   
-  <!-- Notification Badges -->
-  <circle cx="440" cy="120" r="8" fill="#EF4444"/>
-  <text x="440" y="125" font-family="Arial, sans-serif" font-size="10" fill="#fff" text-anchor="middle">3</text>
+  <rect x="72" y="150" width="8" height="6" fill="#06B6D4"/>
+  <rect x="82" y="150" width="8" height="6" fill="#EF4444"/>
+  <rect x="92" y="150" width="8" height="6" fill="#8B5CF6"/>
+  <rect x="102" y="150" width="8" height="6" fill="#10B981"/>
+  <rect x="112" y="150" width="8" height="6" fill="#EC4899"/>
+  <rect x="122" y="150" width="8" height="6" fill="#F59E0B"/>
   
-  <!-- Title -->
-  <text x="300" y="50" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#E2E8F0" text-anchor="middle">SaaS Academy Platform</text>
-  <text x="300" y="75" font-family="Arial, sans-serif" font-size="14" fill="#94A3B8" text-anchor="middle">All-in-one academy management system</text>
+  <text x="102" y="165" font-family="Arial" font-size="6" fill="#94A3B8" text-anchor="middle">Conflict-Free Booking</text>
+  
+  <!-- Center Panel - Analytics (perfectly centered) -->
+  <rect x="155" y="110" width="75" height="60" rx="4" fill="#374151" stroke="#10B981" stroke-width="1"/>
+  <text x="192" y="125" font-family="Arial" font-size="8" font-weight="bold" fill="#10B981" text-anchor="middle">ANALYTICS</text>
+  
+  <!-- Bar Chart - Contained and scaled -->
+  <rect x="162" y="150" width="6" height="15" fill="#10B981">
+    <animate attributeName="height" values="15;20;15" dur="3s" repeatCount="indefinite"/>
+  </rect>
+  <rect x="170" y="145" width="6" height="20" fill="#F59E0B">
+    <animate attributeName="height" values="20;25;20" dur="3.2s" repeatCount="indefinite"/>
+  </rect>
+  <rect x="178" y="140" width="6" height="25" fill="#8B5CF6">
+    <animate attributeName="height" values="25;30;25" dur="2.8s" repeatCount="indefinite"/>
+  </rect>
+  <rect x="186" y="148" width="6" height="17" fill="#EF4444">
+    <animate attributeName="height" values="17;22;17" dur="3.5s" repeatCount="indefinite"/>
+  </rect>
+  <rect x="194" y="142" width="6" height="23" fill="#06B6D4">
+    <animate attributeName="height" values="23;28;23" dur="3.8s" repeatCount="indefinite"/>
+  </rect>
+  <rect x="202" y="152" width="6" height="13" fill="#EC4899">
+    <animate attributeName="height" values="13;18;13" dur="2.5s" repeatCount="indefinite"/>
+  </rect>
+  <rect x="210" y="145" width="6" height="20" fill="#10B981">
+    <animate attributeName="height" values="20;25;20" dur="3.3s" repeatCount="indefinite"/>
+  </rect>
+  <rect x="218" y="148" width="6" height="17" fill="#F59E0B">
+    <animate attributeName="height" values="17;22;17" dur="2.9s" repeatCount="indefinite"/>
+  </rect>
+  
+  <text x="192" y="165" font-family="Arial" font-size="6" fill="#94A3B8" text-anchor="middle">Revenue: +12.5%</text>
+  
+  <!-- Right Panel - Staff (contained within margins) -->
+  <rect x="245" y="110" width="75" height="60" rx="4" fill="#374151" stroke="#06B6D4" stroke-width="1"/>
+  <text x="282" y="125" font-family="Arial" font-size="8" font-weight="bold" fill="#06B6D4" text-anchor="middle">STAFF</text>
+  
+  <!-- Staff Icons - Properly spaced -->
+  <circle cx="260" cy="140" r="6" fill="#06B6D4">
+    <animate attributeName="opacity" values="0.7;1;0.7" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="282" cy="140" r="6" fill="#10B981">
+    <animate attributeName="opacity" values="0.7;1;0.7" dur="2.2s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="304" cy="140" r="6" fill="#F59E0B">
+    <animate attributeName="opacity" values="0.7;1;0.7" dur="1.8s" repeatCount="indefinite"/>
+  </circle>
+  
+  <!-- Staff Status Bars - Contained -->
+  <rect x="255" y="152" width="15" height="3" fill="#10B981"/>
+  <rect x="275" y="152" width="12" height="3" fill="#F59E0B"/>
+  <rect x="295" y="152" width="18" height="3" fill="#06B6D4"/>
+  
+  <text x="282" y="165" font-family="Arial" font-size="6" fill="#94A3B8" text-anchor="middle">3 Active Coaches</text>
+  
+  <!-- Bottom Status Bar - Centered with margins -->
+  <rect x="65" y="180" width="270" height="25" rx="4" fill="#374151" stroke="#EC4899" stroke-width="1"/>
+  <text x="200" y="190" font-family="Arial" font-size="8" font-weight="bold" fill="#EC4899" text-anchor="middle">LIVE PERFORMANCE DASHBOARD</text>
+  <text x="200" y="200" font-family="Arial" font-size="6" fill="#94A3B8" text-anchor="middle">Real-time Analytics • Automated Reports • Smart Insights</text>
+  
+  <!-- Bottom Icons - Evenly distributed with margins -->
+  <circle cx="90" cy="225" r="8" fill="#374151" stroke="#8B5CF6" stroke-width="2"/>
+  <text x="90" y="230" font-family="Arial" font-size="10" fill="#8B5CF6" text-anchor="middle">📊</text>
+  
+  <circle cx="130" cy="225" r="8" fill="#374151" stroke="#10B981" stroke-width="2"/>
+  <text x="130" y="230" font-family="Arial" font-size="10" fill="#10B981" text-anchor="middle">💰</text>
+  
+  <circle cx="170" cy="225" r="8" fill="#374151" stroke="#06B6D4" stroke-width="2"/>
+  <text x="170" y="230" font-family="Arial" font-size="10" fill="#06B6D4" text-anchor="middle">👥</text>
+  
+  <circle cx="210" cy="225" r="8" fill="#374151" stroke="#EC4899" stroke-width="2"/>
+  <text x="210" y="230" font-family="Arial" font-size="10" fill="#EC4899" text-anchor="middle">📈</text>
+  
+  <circle cx="250" cy="225" r="8" fill="#374151" stroke="#F59E0B" stroke-width="2"/>
+  <text x="250" y="230" font-family="Arial" font-size="10" fill="#F59E0B" text-anchor="middle">⚡</text>
+  
+  <circle cx="310" cy="225" r="8" fill="#374151" stroke="#EF4444" stroke-width="2"/>
+  <text x="310" y="230" font-family="Arial" font-size="10" fill="#EF4444" text-anchor="middle">🎯</text>
+  
+  <!-- Data flow particles - Contained within bounds -->
+  <circle cx="120" cy="40" r="2" fill="#8B5CF6">
+    <animate attributeName="cy" values="40;30;40" dur="3s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0;1;0" dur="3s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="180" cy="35" r="2" fill="#10B981">
+    <animate attributeName="cy" values="35;25;35" dur="2.5s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0;1;0" dur="2.5s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="220" cy="40" r="2" fill="#06B6D4">
+    <animate attributeName="cy" values="40;30;40" dur="3.2s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0;1;0" dur="3.2s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="280" cy="35" r="2" fill="#EC4899">
+    <animate attributeName="cy" values="35;25;35" dur="2.8s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0;1;0" dur="2.8s" repeatCount="indefinite"/>
+  </circle>
+  
+  <!-- Hover responsive elements -->
+  <g class="hover-glow">
+    <circle cx="200" cy="150" r="60" fill="none" stroke="#8B5CF6" stroke-width="1" opacity="0">
+      <animate attributeName="opacity" values="0;0.3;0" dur="4s" repeatCount="indefinite"/>
+      <animate attributeName="r" values="60;65;60" dur="4s" repeatCount="indefinite"/>
+    </circle>
+  </g>
 </svg>

@@ -1,0 +1,58 @@
+<svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="brainGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ec4899"/>
+      <stop offset="50%" style="stop-color:#8b5cf6"/>
+      <stop offset="100%" style="stop-color:#3b82f6"/>
+    </linearGradient>
+    <filter id="brainGlow">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Brain Shape -->
+  <path d="M 30 25 Q 20 15 35 15 Q 45 10 55 15 Q 70 15 60 25 Q 75 30 70 45 Q 75 60 65 70 Q 55 80 45 75 Q 35 80 25 70 Q 15 60 20 45 Q 15 30 30 25 Z" 
+        fill="url(#brainGradient)" filter="url(#brainGlow)"/>
+  
+  <!-- Brain Segments -->
+  <path d="M 30 25 Q 40 30 50 25 Q 60 30 70 25" stroke="#ffffff" stroke-width="1" fill="none" opacity="0.6"/>
+  <path d="M 25 40 Q 35 45 45 40 Q 55 45 65 40" stroke="#ffffff" stroke-width="1" fill="none" opacity="0.6"/>
+  <path d="M 30 55 Q 40 60 50 55 Q 60 60 70 55" stroke="#ffffff" stroke-width="1" fill="none" opacity="0.6"/>
+  
+  <!-- Neural Network Nodes -->
+  <circle cx="35" cy="30" r="2" fill="#00f5ff">
+    <animate attributeName="r" values="2;4;2" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="50" cy="35" r="2" fill="#00f5ff">
+    <animate attributeName="r" values="2;4;2" dur="2s" begin="0.5s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="65" cy="30" r="2" fill="#00f5ff">
+    <animate attributeName="r" values="2;4;2" dur="2s" begin="1s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="40" cy="50" r="2" fill="#00f5ff">
+    <animate attributeName="r" values="2;4;2" dur="2s" begin="1.5s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="60" cy="50" r="2" fill="#00f5ff">
+    <animate attributeName="r" values="2;4;2" dur="2s" begin="0.3s" repeatCount="indefinite"/>
+  </circle>
+  
+  <!-- Neural Connections -->
+  <line x1="35" y1="30" x2="50" y2="35" stroke="#00f5ff" stroke-width="1" opacity="0.4">
+    <animate attributeName="opacity" values="0.2;0.8;0.2" dur="3s" repeatCount="indefinite"/>
+  </line>
+  <line x1="50" y1="35" x2="65" y2="30" stroke="#00f5ff" stroke-width="1" opacity="0.4">
+    <animate attributeName="opacity" values="0.2;0.8;0.2" dur="3s" begin="0.5s" repeatCount="indefinite"/>
+  </line>
+  <line x1="40" y1="50" x2="60" y2="50" stroke="#00f5ff" stroke-width="1" opacity="0.4">
+    <animate attributeName="opacity" values="0.2;0.8;0.2" dur="3s" begin="1s" repeatCount="indefinite"/>
+  </line>
+  
+  <!-- Digital Crown -->
+  <polygon points="45,10 50,5 55,10 52,15 48,15" fill="#fbbf24" opacity="0.8">
+    <animateTransform attributeName="transform" type="rotate" values="0 50 50;360 50 50" dur="10s" repeatCount="indefinite"/>
+  </polygon>
+</svg>

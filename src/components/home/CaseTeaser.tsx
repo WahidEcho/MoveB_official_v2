@@ -4,9 +4,9 @@ import { useCallback } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 
 const items = [
-  { href: "/case-studies/levels-academy", title: "Levels Academy", sub: "Conflict‑free scheduling and faster ops with real‑time finance", img: "/case-studies/levels/cover.jpg", logo: "/case-studies/levels/levelslogo.png", coverLogo: true },
-  { href: "/case-studies/insomnia-vr-activation", title: "Insomnia VR Activation", sub: "Playable VR tour of the festival", img: "/case-studies/insomnia/cover.jpg" },
-  { href: "/case-studies/bue-qr-ticketing", title: "BUE | Passaire QR", sub: "Frictionless access with online QR", img: "/case-studies/bue/cover.jpg" },
+  { href: "/solutions/saas-academy-management-platform", title: "SaaS Academy Management Platform", sub: "Conflict‑free scheduling and faster ops with real‑time finance", img: "/case-studies/levels/cover.jpg", logo: "/case-studies/levels/levelslogo.png", coverLogo: true },
+  { href: "/solutions/illusionaire", title: "Illusionaire VR Activation", sub: "Playable VR tour of the festival", img: "/case-studies/illusionaire/cover.jpg" },
+  { href: "/solutions/bue-qr-ticketing", title: "BUE | Passaire QR", sub: "Frictionless access with online QR", img: "/case-studies/bue/cover.jpg" },
 ];
 
 export default function CaseTeaser() {
@@ -18,11 +18,11 @@ export default function CaseTeaser() {
     <section className="py-16">
       <div className="container mx-auto px-6">
         <div className="flex items-end justify-between gap-4">
-          <h2 className="font-display text-3xl md:text-4xl font-semibold">Recent Case Studies</h2>
+          <h2 className="font-display text-3xl md:text-4xl font-semibold">Recent Solutions</h2>
           <div className="flex items-center gap-3">
             <button aria-label="Previous" onClick={scrollPrev} className="h-9 w-9 grid place-items-center rounded-lg border border-[var(--mb-border)] bg-[var(--mb-surface)]">‹</button>
             <button aria-label="Next" onClick={scrollNext} className="h-9 w-9 grid place-items-center rounded-lg border border-[var(--mb-border)] bg-[var(--mb-surface)]">›</button>
-            <a href="/case-studies" className="text-sm underline underline-offset-4">See all</a>
+            <a href="/solutions" className="text-sm underline underline-offset-4">See all</a>
           </div>
         </div>
 

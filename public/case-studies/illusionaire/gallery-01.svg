@@ -1,0 +1,40 @@
+<svg width="800" height="600" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="dreamscape" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#1e1b4b"/>
+      <stop offset="50%" style="stop-color:#312e81"/>
+      <stop offset="100%" style="stop-color:#000000"/>
+    </radialGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="600" fill="url(#dreamscape)"/>
+  
+  <!-- Floating geometric shapes -->
+  <circle cx="200" cy="150" r="30" fill="#8b5cf6" opacity="0.7" filter="url(#glow)"/>
+  <rect x="500" y="200" width="60" height="60" fill="#ec4899" opacity="0.6" transform="rotate(45 530 230)" filter="url(#glow)"/>
+  <polygon points="300,400 350,350 400,400 350,450" fill="#3b82f6" opacity="0.8" filter="url(#glow)"/>
+  
+  <!-- Central focal point -->
+  <circle cx="400" cy="300" r="80" fill="none" stroke="#a855f7" stroke-width="2" opacity="0.9"/>
+  <circle cx="400" cy="300" r="60" fill="none" stroke="#ec4899" stroke-width="1" opacity="0.7"/>
+  <circle cx="400" cy="300" r="40" fill="none" stroke="#3b82f6" stroke-width="1" opacity="0.5"/>
+  
+  <!-- Particles -->
+  <circle cx="150" cy="250" r="3" fill="#ffffff" opacity="0.8"/>
+  <circle cx="600" cy="180" r="2" fill="#ffffff" opacity="0.6"/>
+  <circle cx="650" cy="380" r="4" fill="#ffffff" opacity="0.7"/>
+  <circle cx="100" cy="400" r="2" fill="#ffffff" opacity="0.5"/>
+  
+  <!-- Title overlay -->
+  <text x="400" y="100" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="28" font-weight="bold" opacity="0.9">Virtual Dreamscape</text>
+  <text x="400" y="130" text-anchor="middle" fill="#a855f7" font-family="Arial, sans-serif" font-size="14" opacity="0.7">Enter the realm of infinite possibilities</text>
+</svg>
+

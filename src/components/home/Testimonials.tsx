@@ -14,7 +14,7 @@ const quotes = [
     quote:
       "Their ops team delivered flawlessly — accreditation, access, and logistics were tight.",
     name: "Event Director",
-    org: "Insomnia Festival",
+    org: "Illusionaire Festival",
   },
   {
     quote:

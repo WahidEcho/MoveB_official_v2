@@ -8,7 +8,7 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 const slides = [
   { src: "/about/carousel/Levels.jpg", title: "Levels Academy", caption: "Conflict‑free scheduling & finance clarity" },
   { src: "/about/carousel/BankDuCaire.jpg", title: "Festival", caption: "Immersive fan quests & sponsor activations" },
-  { src: "/about/carousel/Insomnia.jpg", title: "Insomnia VR Activation", caption: "Immersive fan quests & sponsor activations" },
+  { src: "/about/carousel/Insomnia.jpg", title: "Illusionaire VR Activation", caption: "Immersive fan quests & sponsor activations" },
   { src: "/about/carousel/BankDuCaire2.jpg", title: "Concerts & Mega‑events", caption: "Accreditation, production, and on‑site operations" },
   { src: "/about/carousel/ExploreX.jpg", title: "ExploreX", caption: "Digital engagement & interactive experiences" },
   { src: "/about/carousel/Unipal.jpg", title: "Unipal", caption: "Student engagement activations" },

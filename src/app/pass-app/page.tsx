@@ -1,4 +1,11 @@
 import Hero from "./components/Hero";
+import EventSolution from "./components/EventSolution";
+import GuestRegistration from "./components/GuestRegistration";
+import UserRoles from "./components/UserRoles";
+import ManagerDashboard from "./components/ManagerDashboard";
+import PassAppPictures from "./components/PassAppPictures";
+import BuiltForGates from "./components/BuiltForGates";
+import PassAppFlow from "./components/PassAppFlow";
 import FeatureGrid from "./components/FeatureGrid";
 import DeviceShowcase from "./components/DeviceShowcase";
 import FlowSteps from "./components/FlowSteps";
@@ -17,12 +24,19 @@ export default function PassAppPage() {
   return (
     <main className="min-h-screen bg-[var(--mb-bg-0)] text-[var(--mb-text)]">
       <Hero />
+      <EventSolution />
+      <GuestRegistration />
+      <UserRoles />
+      <ManagerDashboard />
+      {/* <PassAppPictures /> */}
+      {/* <BuiltForGates /> */}
+      <PassAppFlow />
       <FeatureGrid />
-      <DeviceShowcase />
-      <FlowSteps />
-      <VoucherShowcase />
-      <AnalyticsTiles />
-      <Carousel />
+      {/* <DeviceShowcase /> */}
+      {/* <FlowSteps /> */}
+      {/* <VoucherShowcase /> */}
+      {/* <AnalyticsTiles /> */}
+      {/* <Carousel /> */}
       <FAQ />
       <CtaStrip
         title="Ready to see Pass App live?"

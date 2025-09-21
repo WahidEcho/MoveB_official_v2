@@ -72,7 +72,7 @@ const services = [
       "Integrations with existing ticketing or federation systems",
       "Custom dashboards for operations & live monitoring",
     ],
-    why: "From Insomnia VR Activation to multi-venue monitoring, we merge creativity with technology to create unforgettable experiences.",
+    why: "From Illusionaire VR Activation to multi-venue monitoring, we merge creativity with technology to create unforgettable experiences.",
     img: "/services/vr.svg",
   },
 ];

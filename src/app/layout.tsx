@@ -5,6 +5,8 @@ import { Inter, Urbanist } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/ui/ThemeProvider";
 import ThemeToggle from "@/components/ui/ThemeToggle";
+import ErrorBoundary from "@/components/common/ErrorBoundary";
+import GlobalErrorHandler from "@/components/common/GlobalErrorHandler";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -59,6 +61,8 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${inter.variable} ${urbanist.variable} antialiased font-sans`}>
         <ThemeProvider>
+        <GlobalErrorHandler />
+        <ErrorBoundary>
         {/* Global animated background */}
         <div aria-hidden className="site-bg">
           <div className="blob blob-1" />
@@ -76,7 +80,7 @@ export default function RootLayout({
               <Link href="/about" className="hover:opacity-80">About</Link>
               <Link href="/services" className="hover:opacity-80">Services</Link>
               <Link href="/pass-app" className="hover:opacity-80">Pass App</Link>
-              <Link href="/case-studies" className="hover:opacity-80">Case Studies</Link>
+              <Link href="/solutions" className="hover:opacity-80">Solutions</Link>
               <Link href="/contact" className="hover:opacity-80">Contact</Link>
               <Link href="/rfp" className="inline-flex items-center rounded-lg px-4 py-2 text-white bg-gradient-to-r from-[var(--mb-primary)] to-[var(--mb-primary-2)]">Request a Proposal</Link>
               <ThemeToggle />
@@ -103,7 +107,9 @@ export default function RootLayout({
             <div>
               <div className="text-[var(--mb-text)] font-medium">Resources</div>
               <ul className="mt-3 space-y-2">
-                <li><Link href="/case-studies" className="hover:opacity-80">Case Studies</Link></li>
+                <li><Link href="/solutions" className="hover:opacity-80">Solutions</Link></li>
+                <li><Link href="/solutions/illusionaire" className="hover:opacity-80">Illusionaire VR</Link></li>
+                <li><Link href="/solutions/saas-academy-management-platform" className="hover:opacity-80">SaaS Academy Platform</Link></li>
               </ul>
             </div>
             <div>
@@ -114,12 +120,13 @@ export default function RootLayout({
               </ul>
             </div>
           </div>
-          <div className="border-t border-[var(--mb-border)] py-6 text-center text-xs text-[var(--mb-muted)]">© {new Date().getFullYear()} Move Beyond. All rights reserved.</div>
+          <div className="border-t border-[var(--mb-border)] py-6 text-center text-xs text-[var(--mb-muted)]">© 2025 Move Beyond. All rights reserved.</div>
         </footer>
         {/* Sticky CTA (mobile-first) */}
         <div className="fixed bottom-4 right-4 z-50 md:hidden">
           <a href="/contact?type=demo" className="rounded-full px-5 py-3 text-white shadow-md bg-gradient-to-r from-[var(--mb-primary)] to-[var(--mb-primary-2)]">Book a Demo</a>
         </div>
+        </ErrorBoundary>
         </ThemeProvider>
       </body>
     </html>

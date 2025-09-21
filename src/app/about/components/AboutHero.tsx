@@ -43,7 +43,7 @@ export default function AboutHero() {
           transition={{ duration: 0.6, delay: 0.3 }}
           className="mt-8"
         >
-          <a href="/case-studies" className="inline-flex items-center rounded-xl px-6 py-3 text-white bg-gradient-to-r from-[var(--mb-primary)] to-[var(--mb-primary-2)] shadow-[0_0_24px_rgba(96,165,250,0.25)] hover:shadow-[0_0_36px_rgba(96,165,250,0.35)] transition-shadow">View Case Studies</a>
+          <a href="/solutions" className="inline-flex items-center rounded-xl px-6 py-3 text-white bg-gradient-to-r from-[var(--mb-primary)] to-[var(--mb-primary-2)] shadow-[0_0_24px_rgba(96,165,250,0.25)] hover:shadow-[0_0_36px_rgba(96,165,250,0.35)] transition-shadow">View Solutions</a>
         </motion.div>
       </div>
       <style jsx>{`

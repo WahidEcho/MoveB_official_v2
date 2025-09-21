@@ -108,6 +108,39 @@ html, body {
   max-width: 1200px;
 }
 
+/* Interactive SVG hover effects */
+.service-image:hover svg .hover-glow {
+  opacity: 1;
+}
+
+.service-image:hover svg .hover-glow circle {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+.service-image:hover svg .data-flow circle {
+  animation-play-state: running !important;
+}
+
+.service-image:hover svg .crowd-energy circle {
+  animation-duration: 1.5s !important;
+}
+
+@keyframes pulse-glow {
+  0%, 100% { opacity: 0.3; transform: scale(1); }
+  50% { opacity: 0.8; transform: scale(1.1); }
+}
+
+/* Enhanced hover effects for service cards */
+.service-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(96, 165, 250, 0.25);
+}
+
+.service-card:hover .service-image svg {
+  transform: scale(1.05);
+  filter: drop-shadow(0 0 20px rgba(96, 165, 250, 0.3));
+}
+
 /* Glass and borders */
 .glass {
   background: var(--mb-surface);
@@ -138,4 +171,53 @@ html, body {
 @keyframes smoothSlidePct {
   from { transform: translateX(0); }
   to { transform: translateX(-300%); }
+}
+
+/* 3D Gallery Styles */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
+/* Illusionaire Page Text Invert Classes */
+.insomnia-text-invert {
+  /* Light mode: Black text */
+  color: #000000;
+}
+
+.insomnia-text-invert-muted {
+  /* Light mode: Black text */
+  color: #000000;
+}
+
+.insomnia-text-invert-purple {
+  /* Light mode: Dark purple */
+  color: #7c3aed;
+}
+
+/* Dark mode: White text */
+.theme-dark .insomnia-text-invert {
+  color: #ffffff !important;
+}
+
+.theme-dark .insomnia-text-invert-muted {
+  color: #ffffff !important;
+}
+
+.theme-dark .insomnia-text-invert-purple {
+  color: #a78bfa !important;
+}
+
+/* Night Journey Tooltip - White text in light mode only */
+.night-journey-tooltip-text {
+  /* Light mode: White text */
+  color: #ffffff;
+}
+
+.theme-dark .night-journey-tooltip-text {
+  /* Dark mode: Keep original color */
+  color: inherit;
 }

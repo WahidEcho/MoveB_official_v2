@@ -5,13 +5,14 @@ export default function Breadcrumbs({ current }:{ current:string }) {
       <ol className="flex gap-2">
         <li><Link href="/" className="underline underline-offset-4">Home</Link></li>
         <li>/</li>
-        <li><Link href="/case-studies" className="underline underline-offset-4">Case Studies</Link></li>
+        <li><Link href="/solutions" className="underline underline-offset-4">Solutions</Link></li>
         <li>/</li>
         <li aria-current="page" className="text-[var(--mb-text)]">{current}</li>
       </ol>
     </nav>
   );
 }
+
 
 
 
